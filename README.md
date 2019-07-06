@@ -1,6 +1,6 @@
 # How-to 'Hello'
 
-> Computer: the digital frontier. These are the voyages of a computer programmer. Its continuing mission: to explore strange new languages. To seek out new... whatever. To boldly code how no one has done before!
+> Computer: the digital frontier. These are the voyages of a computer programmer. Its continuing mission: to explore strange new languages. To seek out new... whatever. To boldly code like no one has done before!
 
 Don't take life so serious, and don't give this projeto too much attention.
 
