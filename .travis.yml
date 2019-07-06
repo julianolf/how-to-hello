@@ -15,6 +15,15 @@ matrix:
         - cd python
       script:
         - python -m unittest
+  include:
+    - language: elixir
+      elixir: '1.9'
+      otp_release: '22.0'
+      install: true
+      before_script:
+        - cd elixir
+      script:
+        - elixir test_hello_world.exs
 notifications:
   email:
     on_success: never
