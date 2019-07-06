@@ -1,0 +1,14 @@
+addons:
+  apt:
+    packages:
+      - bats
+matrix:
+  include:
+    - language: bash
+      before_script:
+        - cd shell
+      script:
+        - bats test_hello_world.sh
+notifications:
+  email:
+    on_success: never
