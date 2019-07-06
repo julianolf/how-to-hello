@@ -9,6 +9,12 @@ matrix:
         - cd shell
       script:
         - bats test_hello_world.sh
+  include:
+    - language: python
+      before_script:
+        - cd python
+      script:
+        - python -m unittest
 notifications:
   email:
     on_success: never
