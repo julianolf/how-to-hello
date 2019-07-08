@@ -1,12 +1,6 @@
 # How-to 'Hello'
 
-> Computer: the digital frontier. These are the voyages of a computer programmer. Its continuing mission: to explore strange new languages. To seek out new... whatever. To boldly code like no one has done before!
-
-Don't take life so serious, and don't give this projeto too much attention.
-
-## About
-
-The most common introductory example for programming languages is a simple program that prints a "Hello, world" message. This project holds the implementation of the "Hello, world" program written in different programming languages.
+The most common introductory example for programming languages is a simple program that prints a "hello world" message. This project holds the implementation of the "hello world" program written in different programming languages.
 
 ## Why?
 
