@@ -24,6 +24,9 @@ matrix:
       script:
         - elixir test_hello_world.exs
 
+    - language: go
+      go: '1.12'
+
 addons:
   apt:
     update: true
