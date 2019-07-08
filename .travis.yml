@@ -7,14 +7,14 @@ matrix:
         - cd shell
       script:
         - bats test_hello_world.sh
-  include:
+
     - language: python
       python: 3.6
       before_script:
         - cd python
       script:
         - python -m unittest
-  include:
+
     - language: elixir
       elixir: '1.9'
       otp_release: '22.0'
@@ -23,9 +23,11 @@ matrix:
         - cd elixir
       script:
         - elixir test_hello_world.exs
+
 addons:
   apt:
     update: true
+
 notifications:
   email:
     on_success: never
