@@ -9,6 +9,7 @@ matrix:
         - bats test_hello_world.sh
   include:
     - language: python
+      python: 3.6
       before_script:
         - cd python
       script:
