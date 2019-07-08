@@ -1,10 +1,8 @@
-addons:
-  apt:
-    packages:
-      - bats
 matrix:
   include:
     - language: bash
+      before_install:
+        - sudo apt-get install -y bats
       before_script:
         - cd shell
       script:
