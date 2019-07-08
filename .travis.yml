@@ -22,6 +22,9 @@ matrix:
         - cd elixir
       script:
         - elixir test_hello_world.exs
+addons:
+  apt:
+    update: true
 notifications:
   email:
     on_success: never
