@@ -36,6 +36,11 @@ matrix:
       script:
         - ruby tc_hello_world.rb
 
+    - language: dart
+      xvfb: false
+      before_install:
+        - cd dart
+
 addons:
   apt:
     update: true
