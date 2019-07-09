@@ -27,6 +27,15 @@ matrix:
     - language: go
       go: '1.12'
 
+    - language: ruby
+      rvm:
+        - '2.6'
+      install: true
+      before_script:
+        - cd ruby
+      script:
+        - ruby tc_hello_world.rb
+
 addons:
   apt:
     update: true
