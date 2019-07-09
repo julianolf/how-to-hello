@@ -1,0 +1,6 @@
+name: 'hello_world'
+environment:
+  sdk: '>=2.4.0'
+dev_dependencies:
+  test: '>=1.6.5'
+  test_process: '>=1.0.4'
