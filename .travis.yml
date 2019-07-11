@@ -41,6 +41,12 @@ matrix:
       before_install:
         - cd dart
 
+    - language: c
+      before_script:
+        - cd c
+      script:
+        - make && make test
+
 addons:
   apt:
     update: true
