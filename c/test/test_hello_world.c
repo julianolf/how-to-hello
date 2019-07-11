@@ -1,4 +1,5 @@
 #include "vendor/unity/src/unity.h"
+#include "test_hello_world.h"
 #include "../src/hello_world.h"
 
 void setUp(void) {}
