@@ -7,16 +7,16 @@ CFLAGS += -Werror
 CFLAGS += -Wmissing-declarations
 CFLAGS += -DUNITY_SUPPORT_64
 
-hello: src/main.c src/hello_world.c src/hello_world.h
+hello: src/*.[c,h]
 	@echo Compiling $@
-	@$(CC) $(CFLAGS) src/hello_world.c src/main.c -o hello
+	@$(CC) $(CFLAGS) src/*.c -o hello
 
 test: tests.out
 	@./tests.out
 
-tests.out: test/test_hello_world.c test/test_hello_world.h src/hello_world.c src/hello_world.h
+tests.out: test/*.[c,h] src/hello_world.[c,h]
 	@echo Compiling $@
-	@$(CC) $(CFLAGS) src/hello_world.c test/vendor/unity/src/unity.c test/test_hello_world.c -o tests.out
+	@$(CC) $(CFLAGS) test/vendor/unity/src/unity.c src/hello_world.c test/*.c -o tests.out
 
 clean:
 	rm -rf *.o *.out *.dSYM hello
