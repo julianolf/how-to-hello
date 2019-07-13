@@ -37,6 +37,7 @@ char * read_file(char *fname)
 	return buffer;
 }
 
+#pragma GCC diagnostic ignored "-Wformat-zero-length"
 out_err capture_out(void (*func)())
 {
 	out_err output = {NULL, 0};
@@ -61,3 +62,4 @@ out_err capture_out(void (*func)())
 
 	return output;
 }
+#pragma GCC diagnostic warning "-Wformat-zero-length"
