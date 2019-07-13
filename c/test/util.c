@@ -22,7 +22,7 @@ char * read_file(char *fname)
 	if (size == -1L)
 		return buffer;
 
-	if (fseek(file, 0, SEEK_SET) != 0)
+	if (fseek(file, 1, SEEK_SET) != 0)
 		return buffer;
 
 	buffer = malloc(size + 1);
@@ -40,22 +40,18 @@ char * read_file(char *fname)
 out_err capture_out(void (*func)())
 {
 	out_err output = {NULL, 0};
-	int _stdout = dup(1);
 	char *fname = "std.out";
-	FILE *file = fopen(fname, "w");
+	int _stdout = dup(STDOUT_FILENO);
+	int _fdesc = open(fname, O_WRONLY | O_CREAT, 0644);
 
-	if (file == NULL) {
-		output.err = 1;
-		return output;
-	}
-
-	fclose(file);
-	int fdescriptor = open(fname, O_WRONLY | O_APPEND);
-    printf(""); // wtf
-	dup2(fdescriptor, 1);
+	printf(" "); // wtf
+	dup2(_fdesc, STDOUT_FILENO);
 	(*func)();
-	dup2(_stdout, 1);
+	dup2(_stdout, STDOUT_FILENO);
+
 	close(_stdout);
+	close(_fdesc);
+
 	output.out = read_file(fname);
 	remove(fname);
 
