@@ -1,6 +1,8 @@
+#include <stdio.h>
+
 #include "hello_world.h"
 
-const char *hello_world(void)
+void hello_world()
 {
-	return "Hello, World!";
+	printf("Hello, World!\n");
 }
