@@ -1,8 +1,8 @@
-#include <stdio.h>
-
 #include "hello_world.h"
 
-int main(void)
+int main()
 {
-	printf("%s\n", hello_world());
+	hello_world();
+
+	return 0;
 }
