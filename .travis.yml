@@ -47,6 +47,10 @@ matrix:
       script:
         - make && make test
 
+    - language: node_js
+      before_install:
+        - cd javascript
+
 addons:
   apt:
     update: true
