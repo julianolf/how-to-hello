@@ -9,7 +9,7 @@ matrix:
         - bats test_hello_world.sh
 
     - language: python
-      python: 3.6
+      python: '3.6'
       before_script:
         - cd python
       script:
@@ -52,6 +52,14 @@ matrix:
         - 'node'
       before_install:
         - cd javascript
+
+    - language: csharp
+      mono: none
+      dotnet: '2.2.301'
+      solution: hello-world.sln
+      script:
+        - dotnet restore
+        - dotnet test
 
 addons:
   apt:
