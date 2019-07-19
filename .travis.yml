@@ -54,9 +54,11 @@ matrix:
         - cd javascript
 
     - language: csharp
-      mono: none
       dotnet: '2.2.301'
+      mono: none
       solution: hello-world.sln
+      before_script:
+        - cd csharp
       script:
         - dotnet restore
         - dotnet test
