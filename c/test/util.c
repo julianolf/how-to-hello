@@ -37,7 +37,7 @@ char * read_file(char *fname)
 	return buffer;
 }
 
-out_err capture_out(void (*func)())
+out_err capture_out(void (*func)(void))
 {
 	out_err output = {NULL, 0};
 	char *fname = "std.out";

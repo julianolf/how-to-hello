@@ -7,6 +7,6 @@ typedef struct output_error {
 } out_err;
 
 char * read_file(char *fname);
-out_err capture_out(void (*func)());
+out_err capture_out(void (*func)(void));
 
 #endif
