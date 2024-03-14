@@ -1,0 +1,12 @@
+name: test
+on:
+  push
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    env:
+      TAG: "${{ github.repository }}:${{ github.sha }}"
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t "$TAG" .
+      - run: docker run "$TAG"
