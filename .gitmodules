@@ -1,6 +1,3 @@
-[submodule "c/test/vendor/unity"]
-	path = c/test/vendor/unity
-	url = https://github.com/ThrowTheSwitch/Unity.git
 [submodule "shell/vendor/bats"]
 	path = shell/vendor/bats
 	url = https://github.com/bats-core/bats-core.git

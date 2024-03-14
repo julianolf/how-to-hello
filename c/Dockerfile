@@ -8,4 +8,4 @@ WORKDIR /opt/hello
 
 COPY . .
 
-CMD ["make", "test"]
+CMD ["make", "run"]
