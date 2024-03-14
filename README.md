@@ -1,6 +1,6 @@
 # How-to 'Hello'
 
-[![Build Status](https://travis-ci.com/julianolf/how-to-hello.svg?branch=master)](https://travis-ci.com/julianolf/how-to-hello)
+![Test](https://github.com/julianolf/how-to-hello/actions/workflows/test.yml/badge.svg?branch=main)
 
 The most common introductory example for programming languages is a simple program that prints a "hello world" message. This project holds the implementation of the "hello world" program written in different programming languages.
 
