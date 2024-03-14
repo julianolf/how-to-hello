@@ -1,9 +1,9 @@
 FROM alpine:3.19
 
-RUN apk add --no-cache bats
+RUN apk add --no-cache bash
 
 WORKDIR /opt/hello
 
 COPY . .
 
-CMD ["bats", "test_hello_world.sh"]
+CMD ["./vendor/bats/bin/bats", "test_hello_world.sh"]
