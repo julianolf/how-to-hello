@@ -8,4 +8,4 @@ WORKDIR /opt/hello
 
 COPY . .
 
-CMD ["make", "run"]
+ENTRYPOINT ["./entrypoint.sh"]
