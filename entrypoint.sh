@@ -29,6 +29,9 @@ say_hello() {
 	javascript)
 		node hello_world.js
 		;;
+	lua)
+		lua5.4 hello_world.lua
+		;;
 	python)
 		python hello_world.py
 		;;
