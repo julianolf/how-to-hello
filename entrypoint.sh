@@ -16,3 +16,6 @@ cd elixir/ && elixir hello_world.exs && cd - >/dev/null && echo
 
 echo "Saying Hello in Go"
 cd go/ && go run hello_world.go && cd - >/dev/null && echo
+
+echo "Saying Hello in JavaScript"
+cd javascript/ && node hello_world.js && cd - >/dev/null && echo
