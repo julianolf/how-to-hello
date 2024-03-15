@@ -26,6 +26,9 @@ say_hello() {
 	fortran)
 		make run
 		;;
+	gleam)
+		gleam run
+		;;
 	go)
 		go run hello_world.go
 		;;
