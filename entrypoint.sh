@@ -38,6 +38,9 @@ say_hello() {
 	lua)
 		lua5.4 hello_world.lua
 		;;
+	perl)
+		perl hello_world.pl
+		;;
 	python)
 		python hello_world.py
 		;;
