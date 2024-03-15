@@ -22,3 +22,6 @@ cd javascript/ && node hello_world.js && cd - >/dev/null && echo
 
 echo "Saying Hello in Python"
 cd python/ && python hello_world.py && cd - >/dev/null && echo
+
+echo "Saying Hello in Ruby"
+cd ruby/ && ruby hello_world.rb && cd - >/dev/null && echo
