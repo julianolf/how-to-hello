@@ -25,3 +25,6 @@ cd python/ && python hello_world.py && cd - >/dev/null && echo
 
 echo "Saying Hello in Ruby"
 cd ruby/ && ruby hello_world.rb && cd - >/dev/null && echo
+
+echo "Saying Hello in Rust"
+cd rust/ && cargo run && cd - >/dev/null && echo
