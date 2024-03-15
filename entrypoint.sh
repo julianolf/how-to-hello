@@ -2,32 +2,52 @@
 
 set -e
 
-echo "Saying Hello in C"
-cd c/ && make run && cd - >/dev/null && echo
+say_hello() {
+	dir="${1%/}"
+	lang="$(echo "$dir" | awk '{print toupper(substr($1, 1, 1)) tolower(substr($1, 2))}')"
 
-echo "Saying Hello in C#"
-cd csharp/ && dotnet run --project HelloWorld && cd - >/dev/null && echo
+	echo "Saying Hello in $lang"
 
-echo "Saying Hello in Dart"
-cd dart/ && dart run hello_world.dart && cd - >/dev/null && echo
+	cd "$dir/"
 
-echo "Saying Hello in Elixir"
-cd elixir/ && elixir hello_world.exs && cd - >/dev/null && echo
+	case "$dir" in
+	c)
+		make run
+		;;
+	csharp)
+		dotnet run --project HelloWorld
+		;;
+	dart)
+		dart run hello_world.dart
+		;;
+	elixir)
+		elixir hello_world.exs
+		;;
+	go)
+		go run hello_world.go
+		;;
+	javascript)
+		node hello_world.js
+		;;
+	python)
+		python hello_world.py
+		;;
+	ruby)
+		ruby hello_world.rb
+		;;
+	rust)
+		cargo run
+		;;
+	shell)
+		. hello_world.sh
+		;;
+	esac
 
-echo "Saying Hello in Go"
-cd go/ && go run hello_world.go && cd - >/dev/null && echo
+	cd - >/dev/null
 
-echo "Saying Hello in JavaScript"
-cd javascript/ && node hello_world.js && cd - >/dev/null && echo
+	echo
+}
 
-echo "Saying Hello in Python"
-cd python/ && python hello_world.py && cd - >/dev/null && echo
-
-echo "Saying Hello in Ruby"
-cd ruby/ && ruby hello_world.rb && cd - >/dev/null && echo
-
-echo "Saying Hello in Rust"
-cd rust/ && cargo run && cd - >/dev/null && echo
-
-echo "Saying Hello in ShellScript"
-cd shell/ && source hello_world.sh && cd - >/dev/null && echo
+for dir in */; do
+	say_hello "$dir"
+done
