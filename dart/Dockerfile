@@ -4,6 +4,4 @@ WORKDIR /opt/hello
 
 COPY . .
 
-RUN dart pub get
-
-CMD ["dart", "test"]
+CMD ["dart", "run", "hello_world.dart"]
