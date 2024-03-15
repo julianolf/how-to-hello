@@ -1,6 +1,9 @@
 FROM alpine:3.19
 
-RUN apk add --no-cache clang make dotnet7-sdk
+RUN apk \
+	--repository "https://dl-cdn.alpinelinux.org/alpine/edge/testing" \
+	--update-cache \
+	add clang make dotnet7-sdk dart-sdk
 
 ENV CC=clang
 ENV DOTNET_NOLOGO=true
