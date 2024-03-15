@@ -10,3 +10,6 @@ cd csharp/ && dotnet run --project HelloWorld && cd - >/dev/null && echo
 
 echo "Saying Hello in Dart"
 cd dart/ && dart run hello_world.dart && cd - >/dev/null && echo
+
+echo "Saying Hello in Elixir"
+cd elixir/ && elixir hello_world.exs && cd - >/dev/null && echo
