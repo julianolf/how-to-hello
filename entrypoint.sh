@@ -28,3 +28,6 @@ cd ruby/ && ruby hello_world.rb && cd - >/dev/null && echo
 
 echo "Saying Hello in Rust"
 cd rust/ && cargo run && cd - >/dev/null && echo
+
+echo "Saying Hello in ShellScript"
+cd shell/ && source hello_world.sh && cd - >/dev/null && echo
