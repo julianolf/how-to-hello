@@ -23,6 +23,9 @@ say_hello() {
 	elixir)
 		elixir hello_world.exs
 		;;
+	fortran)
+		make run
+		;;
 	go)
 		go run hello_world.go
 		;;
