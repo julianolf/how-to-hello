@@ -19,3 +19,6 @@ cd go/ && go run hello_world.go && cd - >/dev/null && echo
 
 echo "Saying Hello in JavaScript"
 cd javascript/ && node hello_world.js && cd - >/dev/null && echo
+
+echo "Saying Hello in Python"
+cd python/ && python hello_world.py && cd - >/dev/null && echo
