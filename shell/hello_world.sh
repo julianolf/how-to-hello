@@ -1,7 +1,3 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
-main() {
-  echo "Hello, World!"
-}
-
-main
+echo "Hello, World!"
