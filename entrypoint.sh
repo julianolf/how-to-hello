@@ -14,6 +14,9 @@ say_hello() {
 	c)
 		make run
 		;;
+	cpp)
+		make run
+		;;
 	csharp)
 		dotnet run
 		;;
