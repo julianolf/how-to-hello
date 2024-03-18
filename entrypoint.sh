@@ -47,6 +47,9 @@ say_hello() {
 	shell)
 		. hello_world.sh
 		;;
+	zig)
+		zig build run
+		;;
 	*)
 		make run
 		;;
