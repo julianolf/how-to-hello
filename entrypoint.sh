@@ -30,7 +30,7 @@ say_hello() {
 		gleam run
 		;;
 	go)
-		go run hello_world.go
+		go run .
 		;;
 	javascript)
 		node hello_world.js
