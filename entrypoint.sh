@@ -11,12 +11,6 @@ say_hello() {
 	cd "$dir/"
 
 	case "$dir" in
-	c)
-		make run
-		;;
-	cpp)
-		make run
-		;;
 	csharp)
 		dotnet run
 		;;
@@ -25,9 +19,6 @@ say_hello() {
 		;;
 	elixir)
 		elixir hello_world.exs
-		;;
-	fortran)
-		make run
 		;;
 	gleam)
 		gleam run
@@ -55,6 +46,9 @@ say_hello() {
 		;;
 	shell)
 		. hello_world.sh
+		;;
+	*)
+		make run
 		;;
 	esac
 
