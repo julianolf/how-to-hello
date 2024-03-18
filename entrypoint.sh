@@ -15,7 +15,7 @@ say_hello() {
 		make run
 		;;
 	csharp)
-		dotnet run --project HelloWorld
+		dotnet run
 		;;
 	dart)
 		dart run hello_world.dart
