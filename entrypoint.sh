@@ -11,6 +11,9 @@ say_hello() {
 	cd "$dir/"
 
 	case "$dir" in
+	clojure)
+		clj -X hello-world/run
+		;;
 	csharp)
 		dotnet run
 		;;
